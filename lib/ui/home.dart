@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:newsphere/ui/form.dart';
 
 class MyHome extends StatelessWidget {
   const MyHome({super.key});
@@ -8,14 +9,26 @@ class MyHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("home")),
-      body: SizedBox(
-        width: double.infinity,
-        height: Get.height,
-        child: Image.asset(
-          "assets/Christmas .png",
-          fit: BoxFit.cover,
-        ),
-      ),
+      body: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(
+                "assets/Christmas .png",
+              ),
+              fit: BoxFit.cover,
+            ),
+          ),
+          width: double.infinity,
+          height: Get.height,
+          child: Column(
+            children: [
+              ElevatedButton(
+                  onPressed: () {
+                    Get.to(const MyForm());
+                  },
+                  child: const Text("sign up"))
+            ],
+          )),
     );
   }
 }
