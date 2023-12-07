@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:newsphere/ui/form.dart';
+import 'package:newsphere/ui/list.dart';
 
 class MyHome extends StatelessWidget {
   const MyHome({super.key});
@@ -26,7 +27,12 @@ class MyHome extends StatelessWidget {
                   onPressed: () {
                     Get.to(const MyForm());
                   },
-                  child: const Text("sign up"))
+                  child: const Text("sign up")),
+              ElevatedButton(
+                  onPressed: () {
+                    Get.to(const ParticipantList());
+                  },
+                  child: const Text("Participant List"))
             ],
           )),
     );

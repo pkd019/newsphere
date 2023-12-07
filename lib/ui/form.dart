@@ -30,8 +30,7 @@ class MyForm extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0),
                 ),
-                color:
-                    Colors.white.withOpacity(0.8), // Adjust opacity as needed
+                color: Colors.white.withOpacity(0.8),
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Column(

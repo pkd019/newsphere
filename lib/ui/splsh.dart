@@ -55,7 +55,7 @@ class _SplashScreenState extends State<SplashScreen>
             ),
             Image.asset(
               "assets/Christmas.png",
-              height: Get.height * 0.4, // Adjust the height here
+              height: Get.height * 0.4,
             ),
             const SizedBox(
               height: 16,
