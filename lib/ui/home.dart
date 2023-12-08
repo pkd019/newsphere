@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:newsphere/controller/profilecontroller.dart';
 import 'package:newsphere/ui/form.dart';
 import 'package:newsphere/ui/list.dart';
+import 'package:newsphere/ui/myprofile.dart';
 
 class MyHome extends StatelessWidget {
   const MyHome({super.key});
@@ -32,7 +34,13 @@ class MyHome extends StatelessWidget {
                   onPressed: () {
                     Get.to(const ParticipantList());
                   },
-                  child: const Text("Participant List"))
+                  child: const Text("Participant List")),
+              ElevatedButton(
+                  onPressed: () {
+                    Get.put(ProfileController());
+                    Get.to(MyProfile());
+                  },
+                  child: const Text("MyProfile"))
             ],
           )),
     );
